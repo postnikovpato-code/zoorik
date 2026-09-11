@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZOORIK — подготовка к запуску кабинета</title>
+<meta name="description" content="Что нужно сделать до начала работ над личным кабинетом: сервер, адрес, доступы.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="ZOORIK — подготовка к запуску кабинета">
+<meta property="og:description" content="Три задачи: сервер, адрес кабинета и доступы. Примерно полчаса.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Golos+Text:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">ZOORIK · личный кабинет</div>
+    <h1>Что нужно сделать до начала работ</h1>
+    <p>Две задачи в браузере — арендовать сервер и добавить адрес для кабинета, примерно полчаса.
+       Плюс список того, что понадобится передать по ходу работы. Программировать ничего не нужно.</p>
+  </div>
+</header>
+
+<div class="wrap layout">
+
+  <nav class="sidenav" aria-label="Разделы">
+    <div class="progress-box">
+      <div class="progress-label"><span>Сделано</span><b><span id="done">0</span> из <span id="total">0</span></b></div>
+      <div class="bar"><span id="bar"></span></div>
+    </div>
+    <div class="navlinks">
+      <a href="#server"><i>1</i> Сервер</a>
+      <a href="#domain"><i>2</i> Адрес кабинета</a>
+      <a href="#rest"><i>3</i> Данные и решения</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <a class="backlink" href="../../">← Все документы</a>
+
+    <div class="urgent">
+      <h2>С чего начать прямо сегодня</h2>
+      <p>Проверьте, есть ли у вас доступ в личный кабинет <strong>REG.RU</strong> — там настраивается адрес
+         для кабинета. Это единственный пункт, который может занять несколько дней: домены часто регистрировал
+         бывший подрядчик, и восстановление доступа идёт через письмо на бланке компании. Всё остальное делается
+         за полчаса. Подробности — во второй части.</p>
+    </div>
+
+    <!-- ============ ЧАСТЬ 1 ============ -->
+    <section class="part" id="server">
+      <div class="part-head">
+        <div class="eyebrow">Часть 1</div>
+        <h2>Сервер</h2>
+        <p class="lead">Кабинет с данными о питомцах должен где-то работать круглосуточно. Для этого арендуем
+           сервер у российской компании Selectel — данные покупателей по закону должны храниться в России.
+           Аккаунт оформляется на ZOORIK, а не на меня: сервис и база клиентов остаются вашей собственностью
+           при любом развитии событий.</p>
+      </div>
+
+      <ol class="steps">
+
+        <li class="step">
+          <h3>Зарегистрировать аккаунт</h3>
+          <div class="body">
+            <p>Откройте <a href="https://selectel.ru" target="_blank" rel="noopener">selectel.ru</a> и нажмите
+               «Зарегистрироваться» справа вверху.</p>
+            <p>Почту укажите рабочую, компании — не личную. На неё будут приходить счета и письма о работе
+               сервера, и лучше, если доступ к ней есть не у одного человека.</p>
+          </div>
+          <label class="check"><input type="checkbox" data-k="s1"> Готово</label>
+        </li>
+
+        <li class="step">
+          <h3>Заполнить реквизиты компании</h3>
+          <div class="body">
+            <p>После регистрации панель попросит данные плательщика. Выберите <strong>юридическое лицо</strong>
+               (или ИП, если так удобнее для оплаты) и заполните название, ИНН, адрес.</p>
+            <p class="note">Это нужно, чтобы получать закрывающие документы для бухгалтерии.</p>
+          </div>
+          <label class="check"><input type="checkbox" data-k="s2"> Готово</label>
+        </li>
+
+        <li class="step">
+          <h3>Пополнить баланс на 3 000 ₽</h3>
+          <div class="body">
+            <p>Раздел <strong>«Баланс»</strong> или <strong>«Оплата»</strong>. Деньги списываются ежедневно,
+               по факту использования.</p>
+
+            <table class="costs">
+              <caption>Во что обойдётся содержание</caption>
+              <tbody>
+                <tr>
+                  <th>Сервер<br><span style="font-size:14.5px;color:var(--ink-faint)">2 ядра, 4 ГБ памяти, 50 ГБ диска, адрес и трафик включены</span></th>
+                  <td>650 ₽ / мес</td>
+                </tr>
+                <tr>
+                  <th>Хранилище для резервных копий</th>
+                  <td>~100 ₽ / мес</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr><td>Итого</td><td>~750 ₽ / мес</td></tr>
+              </tfoot>
+            </table>
+
+            <p class="note"><b>Почему сразу 3 000, а не помесячно.</b> Этого хватит примерно на четыре месяца.
+               Пока вы в отпуске, никто не заметит, что деньги закончились, — а когда баланс опустеет,
+               сервер выключат и кабинет перестанет работать. Если в панели есть автоплатёж, включите и его.</p>
+            <p>Конкретную конфигурацию выбирать не нужно — сервер соберу я, когда получу доступ.</p>
+          </div>
+          <label class="check"><input type="checkbox" data-k="s3"> Готово</label>
+        </li>
+
+        <li class="step">
+          <h3>Добавить меня в аккаунт</h3>
+          <div class="body">
+            <p>Пароль от аккаунта передавать не нужно. В Selectel можно завести второго человека
+               с собственным входом и при желании убрать его одной кнопкой.</p>
+            <ul>
+              <li>Нажмите на название аккаунта или иконку профиля справа вверху.</li>
+              <li>Найдите раздел <strong>«Управление доступом»</strong> или <strong>«Пользователи»</strong> —
+                  в разных версиях панели он называется чуть по-разному, ищите слово «пользователи» или «доступ».</li>
+              <li>«Добавить пользователя», почта: <span class="mono">xroniks25@gmail.com</span></li>
+              <li>Роль — <strong>администратор аккаунта</strong>.</li>
+            </ul>
+            <p class="note"><b>Зачем полный доступ.</b> Чтобы собрать и настроить сервер, не дёргая вас
+               по каждой мелочи. После запуска права можно сузить или отозвать совсем — это делается
+               в том же разделе за десять секунд.</p>
+            <p>Если нужного пункта не находится, напишите в чат поддержки Selectel — значок внизу справа.
+               Формулировка: «хочу добавить в аккаунт пользователя с правами администратора».</p>
+          </div>
+          <label class="check"><input type="checkbox" data-k="s4"> Готово</label>
+        </li>
+
+        <li class="step">
+          <h3>Написать мне, что готово</h3>
+          <div class="body">
+            <p>Нужны две вещи: что пользователь добавлен и номер аккаунта Selectel — он виден
+               справа вверху в панели.</p>
+            <p>Дальше я создаю сервер и присылаю вам его адрес — он понадобится во второй части.</p>
+          </div>
+          <label class="check"><input type="checkbox" data-k="s5"> Готово</label>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- ============ ЧАСТЬ 2 ============ -->
+    <section class="part" id="domain">
+      <div class="part-head">
+        <div class="eyebrow">Часть 2</div>
+        <h2>Адрес кабинета</h2>
+        <p class="lead">Кабинет будет открываться по адресу <span class="mono">lk.zoorik.ru</span> — это ваш же
+           домен, только с приставкой. Такой адрес называется поддоменом, отдельно покупать его не нужно,
+           он бесплатный. Чтобы он заработал, нужно добавить одну строчку в настройках домена.</p>
+      </div>
+
+      <ol class="steps">
+
+        <li class="step">
+          <h3>Проверить, есть ли доступ в REG.RU</h3>
+          <div class="body">
+            <p>Домен <span class="mono">zoorik.ru</span> обслуживается в REG.RU — я проверил это
+               по техническим данным домена. Значит и настройка делается там.</p>
+            <p>Зайдите на <a href="https://reg.ru" target="_blank" rel="noopener">reg.ru</a> и убедитесь,
+               что можете войти. <strong>Сделайте это в первую очередь</strong>, не дожидаясь сервера.</p>
+            <p class="note"><b>Если войти не получается.</b> Вспомните, на кого регистрировали домен —
+               обычно это тот, кто делал сайт, или тот, кто платит за продление. Попробуйте «Забыли пароль»
+               по той почте. Если не вышло — напишите в поддержку REG.RU: домен оформлен на организацию,
+               поэтому доступ восстанавливают по письму на бланке компании, они подскажут порядок.
+               Это может занять несколько дней, поэтому и стоит начать сейчас.</p>
+          </div>
+          <label class="check"><input type="checkbox" data-k="d1"> Готово</label>
+        </li>
+
+        <li class="step">
+          <h3>Добавить запись, когда я пришлю адрес сервера</h3>
+          <div class="body">
+            <p>Адрес выглядит как набор цифр, например <span class="mono">188.94.156.10</span>.
+               Он появится после того, как я создам сервер.</p>
+            <ul>
+              <li>Войдите на reg.ru, откройте раздел <strong>«Домены»</strong> и выберите <span class="mono">zoorik.ru</span>.</li>
+              <li>Найдите <strong>«Управление зоной DNS»</strong> — может называться «DNS-серверы и управление зоной».</li>
+              <li>«Добавить запись», тип — <strong>A</strong>.</li>
+              <li>Поддомен: <span class="mono">lk</span></li>
+              <li>IP-адрес: тот, что я пришлю.</li>
+            </ul>
+            <p class="note">Изменения вступают в силу от нескольких минут до пары часов — так устроен интернет,
+               это нормально. Я проверю и скажу, когда заработает.</p>
+            <p>Если доступ найдётся, но разбираться самим не хочется — добавьте меня в REG.RU
+               или передайте доступ на время настройки, сделаю сам за минуту. Пароль потом смените.</p>
+          </div>
+          <label class="check"><input type="checkbox" data-k="d2"> Готово</label>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- ============ ЧАСТЬ 3 ============ -->
+    <section class="part" id="rest">
+      <div class="part-head">
+        <div class="eyebrow">Часть 3</div>
+        <h2>Данные и решения</h2>
+        <p class="lead">Здесь ничего настраивать не нужно — это список того, что понадобится передать
+           по ходу работы. Самое важное помечено отдельно.</p>
+      </div>
+
+      <div class="group-title">Данные и контент</div>
+      <ul class="needs">
+        <li>
+          <input type="checkbox" data-k="r4">
+          <div>
+            <span class="t">Прямые ссылки на карточки маркетплейсов<span class="tag">важное</span></span>
+            <span class="d">По каждому товару — ссылка на конкретную карточку на Ozon, Wildberries
+              и Яндекс.Маркете. Сейчас с сайта ведут ссылки в общий каталог бренда: если так останется,
+              персональная подборка приведёт покупателя в поиск маркетплейса, где рядом окажутся конкуренты.</span>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" data-k="r5">
+          <div>
+            <span class="t">Кто подтвердит разметку товаров<span class="tag">важное</span></span>
+            <span class="d">Черновик признаков по всем 93 позициям — для кого средство, тип шерсти,
+              окрас, возраст, задача, зона ухода — подготовлю я. От вас нужен человек, который знает
+              продукцию и проверит спорные места. Именно от этой таблицы зависит, что система будет
+              советовать покупателям, поэтому подтверждать должен тот, кто отвечает за состав.</span>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" data-k="r6">
+          <div>
+            <span class="t">ID продавца на Wildberries и Ozon</span>
+            <span class="d">Нужны для меток на ссылках: обе площадки требуют свой формат, иначе переходы
+              не попадут в отчёты и эффект работы не будет виден в цифрах.</span>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" data-k="r7">
+          <div>
+            <span class="t">Рекомендации по уходу</span>
+            <span class="d">Как часто мыть, чистить уши, обрабатывать лапы, когда начинать сезонную обработку
+              от паразитов. Источник — инструкции к вашей продукции и мнение технолога. Черновик текстов
+              подготовлю я, утверждает компания: это рекомендации от лица бренда.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="group-title">Решения по продукту</div>
+      <ul class="needs">
+        <li>
+          <input type="checkbox" data-k="r8">
+          <div>
+            <span class="t">Что получает покупатель за прохождение квиза</span>
+            <span class="d">Выбрать один вариант:
+              <ul>
+                <li>ничего материального — ценность в самой подборке и программе ухода</li>
+                <li>общий промокод продавца на площадке</li>
+                <li>подарок или пробник при следующем заказе</li>
+                <li>накопительные баллы под подарки на мероприятиях</li>
+                <li>свой вариант — список не окончательный, если есть идея, обсудим</li>
+              </ul>
+              <span class="after">От ответа зависят тексты и логика финального экрана.</span></span>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" data-k="r9">
+          <div>
+            <span class="t">Название сервиса</span>
+            <span class="d">Как называем кабинет: «Пет-паспорт», «Кабинет питомца», иначе?
+              Название попадёт на кнопку в меню сайта и в тексты внутри кабинета.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="group-title">Документы</div>
+      <ul class="needs">
+        <li>
+          <input type="checkbox" data-k="r10">
+          <div>
+            <span class="t">Документы по персональным данным</span>
+            <span class="d">От вашего юриста. Мы храним имя, почту и данные о питомце, поэтому нужно:
+              <ul>
+                <li>политика обработки персональных данных</li>
+                <li>текст согласия, который человек принимает при регистрации</li>
+                <li>подтверждение, что компания зарегистрирована как оператор персональных данных</li>
+              </ul></span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="foot">
+      <p>Галочки сохраняются в вашем браузере — можно закрыть страницу и вернуться позже,
+         отметки останутся на месте.</p>
+      <p>Если что-то не находится в панели или выглядит не так, как описано, — напишите мне,
+         разберёмся за пару минут.</p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+(function(){
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('input[type=checkbox][data-k]'));
+  var KEY = 'zoorik-checklist';
+  var state = {};
+
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { state = {}; }
+
+  var doneEl = document.getElementById('done');
+  var totalEl = document.getElementById('total');
+  var barEl = document.getElementById('bar');
+  totalEl.textContent = boxes.length;
+
+  function paint(){
+    var n = 0;
+    boxes.forEach(function(b){
+      if (b.checked) n++;
+      var label = b.closest('.check');
+      if (label) label.classList.toggle('done', b.checked);
+    });
+    doneEl.textContent = n;
+    barEl.style.width = (boxes.length ? (n / boxes.length * 100) : 0) + '%';
+  }
+
+  boxes.forEach(function(b){
+    if (state[b.dataset.k]) b.checked = true;
+    b.addEventListener('change', function(){
+      state[b.dataset.k] = b.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+      paint();
+    });
+  });
+
+  paint();
+})();
+</script>
+
+</body>
+</html>
