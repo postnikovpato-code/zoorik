@@ -307,6 +307,9 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   padding:9px 20px;cursor:pointer;
 }
 .copy:hover{background:var(--blue-dark)}
+a.copy{display:inline-block;text-decoration:none;line-height:1.25}
+a.copy:hover{color:#fff}
+.filemeta{font-size:14.5px;color:var(--ink-faint);margin-left:12px}
 .copy[data-state="ok"]{background:var(--ok)}
 .status{font-size:14px;color:var(--ok);font-family:Rubik,sans-serif}
 
